@@ -1,0 +1,103 @@
+eureka:  
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 20
+server:
+  port: 8001
+spring:
+  http:
+    multipart:
+      enabled:true
+      max-file-size:10MB
+      max-request-size:50MB
+  profiles: pro
+  application:
+    name: ticket-zuul
+  datasource:
+    url: jdbc:mysql://localhost/tbs
+    username: root
+    password: 1234qwerht
+    driverClassName: com.mysql.jdbc.Driver
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  redis:
+    database: 5
+    timeout: 3000
+    pool:
+      max-idle: 500
+      min-idle: 20
+      max-active: 2000
+      max-wait: 1000
+  redis-user:
+    host: 127.0.0.1
+    password:
+    port: 6379
+    havePassword: false
+    testOnBorrow: false
+    timeout: 3000
+  activemq:
+    broker-url: tcp://localhost:61616
+    in-memory: true
+    pool:
+      enabled: false
+    packages:
+      trust-all: true
+zuul:
+  sensitive-headers:
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 60000
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: usercenter
+    api-b:
+      path: /api-b/**
+      serviceId: ticket-booking
+    api-c:
+      path: /api-c/**
+      serviceId: booking-center
+    api-d:
+      path: /api-d/**
+      serviceId: checking-center
+    api-e:
+      path: /api-e/**
+      serviceId: log-center
+    api-f:
+      path: /api-f/**
+      serviceId: wechat-center
+    api-u:
+      path: /api-u/**
+      serviceId: htweb-fms
+    api-t:
+      path: /api-t/**
+      serviceId: task-center     
+    baidu:
+      path: /baidu/**
+      url: http://www.baidu.com
+    httk:
+      path: /**
+      url: http://localhost:8080
+feign:
+  hystrix:
+    enabled : true
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+hystrix :
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000

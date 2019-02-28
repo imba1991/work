@@ -1,0 +1,80 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://10.39.1.23:8880/eureka/
+  instance:
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 20
+server:
+  port: 8001
+spring:
+  application:
+    name: ticket-zuul
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://10.39.1.23/tbs
+    username: root
+    password: admin
+    driverClassName: com.mysql.jdbc.Driver
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  redis:
+    database: 5
+    timeout: 3000
+    pool:
+      max-idle: 500
+      min-idle: 20
+      max-active: 2000
+      max-wait: 1000
+  redis-user:
+    host: 10.39.1.24
+    password:
+    port: 6379
+    havePassword: false
+    testOnBorrow: false
+    timeout: 900
+  activemq:
+    broker-url: tcp://localhost:61616
+    in-memory: true
+    pool:
+      enabled: false
+    packages:
+      trust-all: true
+zuul:
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 60000
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: usercenter
+    api-b:
+      path: /api-b/**
+      serviceId: ticket-booking
+    api-c:
+      path: /api-c/**
+      serviceId: booking-center
+    api-d:
+      path: /api-d/**
+      serviceId: checking-center
+feign:
+  hystrix:
+    enabled : true
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+hystrix :
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
