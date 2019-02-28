@@ -1,0 +1,100 @@
+a{
+  text-decoration: none;
+  color: #1e66dc
+}
+
+/* font-size start */
+.text-lg{
+  font-size: 18px;
+}
+/* font-size end */
+
+.text-bold{
+  font-weight: bold;
+}
+
+/* color css start */
+.primary {
+  color: #1e66dc
+}
+
+.text-black{
+  color: #000;
+}
+
+.text-lightBlack{
+  color: #555;
+}
+
+.text-gray{
+  color: #999;
+}
+
+.text-red{
+  color: #f56c6c;
+}
+/* color css end */
+
+.right{
+  float: right;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.padding-15 {
+  padding: 15px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/* button css start */
+.button{
+  padding: 10px 29px;
+}
+/* button css end */
+
+/* 商品中心 公共样式 --- start */
+.commomItem {
+  background: #fff;
+  box-shadow: 0px 2px 4px #ddd;
+  padding: 10px 20px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.itemTitle {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.titleLink {
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.trisection {
+  /*三等分*/
+  width: 33%;
+}
+
+.border-right {
+  border-right: 1px solid #ccc;
+}
+/* 商品中心 公共样式 --- end */

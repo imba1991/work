@@ -1,0 +1,265 @@
+html,
+body,
+#app {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+span,
+a {
+  cursor: default;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.boxshadow {
+  box-shadow: 0px 2px 4px #ddd;
+}
+
+.el-textarea__inner {
+  font-family: 微软雅黑;
+  font-size: 13px;
+}
+
+/* button css start */
+.btn,
+.btn-medium {
+  width: 86px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 3px;
+  border: none;
+  background-color: #1e66dc;
+  color: #fff;
+  outline: none;
+}
+
+.btn-medium {
+  width: 116px;
+}
+
+.btn-round {
+  width: 66px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 12px;
+  background-color: #f6f6f6;
+  color: #888888;
+  border: solid 1px #e5e5e5;
+  border-radius: 10px;
+  outline: none;
+}
+
+.btn-round.active {
+  background-color: #1e66dc;
+  color: #fff;
+}
+
+.btn-large {
+  width: 300px;
+  letter-spacing: 2.8px;
+}
+
+.btn[type="light"],
+.btn-medium[type="light"] {
+  background: #fff;
+  border: solid 1px #dddddd;
+  color: #bbbbbb;
+}
+
+.btn[type="danger"] {
+  background: #e54545;
+  color: #fff;
+}
+
+.btn[type="border"] {
+  background: #fff;
+  color: #1e66dc;
+  border: solid 1px #1e66dc;
+}
+
+.btn:disabled {
+  color: #fff;
+  background-color: #909399;
+  border-color: #909399;
+  cursor: not-allowed;
+}
+
+.el-button {
+  min-width: 86px;
+  padding: 10px 10px;
+}
+
+.el-button.el-button--text {
+  min-width: 30px;
+}
+
+.el-button.large {
+  width: 116px;
+}
+.el-button.is-circle{
+  min-width: 0;
+}
+.el-button--primary.is-disabled,
+.el-button--primary.is-disabled:hover,
+.el-button--primary.is-disabled span {
+  color: #fff;
+  background-color: #909399;
+  border-color: #909399;
+  cursor: not-allowed;
+}
+
+/* button css end */
+
+.el-table {
+  border: 1px solid #e5e5e5;
+  border-bottom: 0;
+}
+
+.el-table .cell {
+  text-align: center;
+  font-size: 12px;
+}
+
+/* .el-table tbody .el-table__row:nth-child(2n) {
+  background: #f6f6f6;
+} */
+
+.el-table thead,
+.el-table th {
+  color: #122c58;
+  background: #E5E5E5;
+}
+
+.el-table th,
+.el-table td {
+  padding: 10px 0;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+::-webkit-input-placeholder {
+  color: red;
+  font-size: 12px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #FFF;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #A0B4DC;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #4979C5
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #E1ECFE
+}
+
+.el-pagination {
+  text-align: center;
+  padding: 20px;
+}
+
+
+/* messageBox css */
+.el-message-box {
+  width: 30%;
+}
+
+.el-message-box__header {
+  padding: 20px 20px 10px;
+}
+
+.el-message-box__content {
+  padding: 40px 37px;
+}
+
+.el-message-box__message .el-icon-warning {
+  color: rgb(253, 185, 20);
+}
+
+.el-message-box__btns {
+  text-align: center;
+  margin-bottom: 9px;
+}
+
+.el-message-box__btns .el-button {
+  padding: 10px 29px;
+  font-size: 14px;
+}
+
+/* messageBox css end */
+
+/* dialog css start */
+.el-dialog__title {
+  font-size: 16px;
+}
+
+.el-dialog__body {
+  padding: 30px 20px;
+}
+
+.el-dialog .el-form-item__label {
+  text-align: left;
+}
+
+.el-dialog .el-form-item .el-input {
+  width: 300px;
+}
+
+.el-dialog .el-form-item .el-textarea{
+  width: 300px;
+}
+
+.el-dialog__footer {
+  text-align: center;
+}
+
+/* dialog css end */
+
+/* el-form css start */
+.el-form-item {
+  margin-bottom: 30px;
+}
+
+.el-form-item__label {
+  font-size: 12px;
+}
+
+.el-input__inner {
+  padding: 0 10px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 14px;
+  border-radius: 3px;
+  border: 1px solid #e5e5e5;
+  color: #000;
+}
+
+/* el-form css end */
